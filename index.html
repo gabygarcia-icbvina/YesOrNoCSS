@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Mi Pagina con CSS</title>
+</head>
+<body>
+    <h1>Mi sitio web</h1>
+    <p>Este es un párrafo normal.</p>
+    <button id="disconnect">
+        Desconectar CSS [!]
+    </button>
+    <p class="importante">Este es un texto importante.</p>
+
+    <div id="contenedor">
+        <p>Contenido dentro de un contenedor</p>
+    </div>
+</body>
+</html>
+<script>
+        let isConnected = true
+        const disconnectBtn = document.getElementById("disconnect");
+        if (disconnectBtn){
+            disconnectBtn.addEventListener('click', (e) => {
+            e.preventDefault()
+            if (isConnected) {
+                disconnectBtn.textContent = "Conectar CSS [!]"
+                disconnectBtn.style.backgroundColor = "darkgreen"
+                document.querySelector('link[href="styles.css"]').remove()
+            } else {
+                disconnectBtn.textContent = "Desconectar CSS [!]"
+                disconnectBtn.style.backgroundColor = "darkred"
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'styles.css'; // Ruta a tu archivo CSS
+                document.getElementsByTagName('head')[0].appendChild(link);
+
+            }
+            isConnected = !isConnected
+        })
+    }
+        
+</script>

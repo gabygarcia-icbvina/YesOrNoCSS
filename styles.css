@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "FiraCode";
+    src: url("firaCode.ttf") format("truetype");
+}
+body {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, black,  #05014a);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+body h1, body p {
+    display: block;
+    position: static;
+}
+
+*  {
+    text-align: center;
+    font-family: "FiraCode", monospace;
+    color: wheat;
+}
+
+* h1 {
+   font-size: 6rem;
+   margin-bottom: 0 ;
+}
+
+* p {
+    margin-top: 0;
+}
+
+.importante {
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    margin: 0, auto;
+    text-align: center;
+    position: relative;
+    display: block;
+    max-width: 30%;
+    margin-top: 30vh;
+    padding: 2rem;
+    background-color: yellow;
+    color: black;
+    border-radius: 12px;
+    box-shadow: yellow 140px;
+}
+
+.importante:hover {
+    background-color: black;
+    color: yellow;
+    box-shadow: black 40px;
+}
+
+#contenedor {
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    padding-top: 1px;
+    text-align: center;
+    box-sizing: border-box;
+    border-width: 0.5em;
+    border-style: dashed;
+    border-color: #610000;
+    width: 20vw;
+    height: 20vh;
+}
+#contenedor p {
+    transition: all 0.5s ease-in-out;
+    overflow-wrap: break-word;
+    display: block;
+    margin-top: 4.5rem;
+}
+
+#contenedor:hover {
+    background-color: #610000;
+    color: crimson;
+    border-color: deeppink;
+}
+
+#disconnect {
+    transition: all 0.5s ease-in-out;
+    background: darkred;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: 2rem;
+    opacity: 30%;
+}
+#disconnect:hover {
+    padding: 1.75rem;
+    opacity: 50%;
+}
