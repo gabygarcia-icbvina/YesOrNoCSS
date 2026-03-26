@@ -3,6 +3,7 @@
     src: url("firaCode.ttf") format("truetype");
 }
 body {
+    min-width: 300px;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
@@ -91,3 +92,32 @@ body h1, body p {
     padding: 1.75rem;
     opacity: 50%;
 }
+
+@media (max-width: 768px) {
+    * h1 {
+    font-size: 3rem;
+    margin-bottom: 0 ;
+    }
+
+    * p {
+        margin-top: 0;
+    }
+    #contenedor {
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    padding-top: 1px;
+    text-align: center;
+    box-sizing: border-box;
+    border-width: 0.5em;
+    border-style: dashed;
+    border-color: #610000;
+    width: 50vw;
+    height: 10vh;
+}
+    #contenedor p {
+        transition: all 0.5s ease-in-out;
+        overflow-wrap: break-word;
+        display: block;
+        margin-top: 0.5rem;
+    }
+}   
